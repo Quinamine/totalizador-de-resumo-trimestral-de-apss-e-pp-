@@ -1,0 +1,103 @@
+﻿input,textarea{border:none;border-radius:0;outline:0;color:var(--text-color);font-family:sans-serif,Arial,Helvetica!important;font-size:14px}input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}input[type=number]{-moz-appearance:textfield;padding:0;max-width:50px}input[type=number].fs-12{font-size:12px}input[type=number].fs-11{font-size:11px}input[readonly],input[type=date],input[type=text]{font-weight:700!important}input[readonly]{cursor:default;transition:background-color .4s ease-out}.bgc-gray,input[readonly].bg-gray{background-color:var(--gray-c)!important}input[type=number].fundo-vermelho{background-color:var(--danger-color)!important;color:var(--yt)}div.ficha strong{text-decoration:underline}div.container>header input{font-weight: bold;}
+
+/* Container */
+div.container {
+    max-width: 998px;
+    min-width: 998px;
+    margin: 30px auto;
+}
+
+div.container div.contentor-de-emblema-e-titulo {
+    display: grid;
+    grid-template-columns: 160px 638px;
+    grid-column-gap: 200px;
+    margin-bottom: 5px;
+}
+
+div.contentor-de-emblema-e-titulo figure {
+    margin: 0;
+}
+
+div.contentor-de-emblema-e-titulo figure img {
+    display: block;
+    margin: auto;
+}
+
+
+div.contentor-de-emblema-e-titulo 
+div.contentor-de-emblema span {
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    font-size: 9px;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+div.contentor-de-emblema-e-titulo 
+div.contentor-de-titulo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+div.contentor-de-titulo h1 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+div.contentor-de-titulo span {
+    font-size: 14px;
+}
+
+/* Linha de Geolocalização */
+
+div.linha-de-geolocalizacao {
+    display: grid;
+    grid-template-columns: 95px 170px 200px 230px 60px;
+    grid-template-areas: ". provincia distrito us ano";
+}
+
+div.linha-de-geolocalizacao > div {
+    display: grid;
+    grid-template-rows: 20px 30px;
+}
+
+div.linha-de-geolocalizacao div.col-de-provincia {
+    grid-area: provincia;
+}
+
+div.linha-de-geolocalizacao div.col-de-distrito {
+    grid-area: distrito;
+}
+
+div.linha-de-geolocalizacao div.col-de-us {
+    grid-area: us;
+}
+
+div.linha-de-geolocalizacao div.col-de-ano {
+    grid-area: ano;
+}
+
+div.linha-de-geolocalizacao > div label {
+    text-align: center;
+    font-weight: 700;
+}
+
+div.linha-de-geolocalizacao > div input {
+    display: block;
+    width: 100%;
+    border: 1px solid var(--border-color);
+    text-align: center;
+}
+
+
+
+
+
+
+@-moz-document url-prefix(){div.nota{min-height:96px}}@media screen and (max-width:998px){div.linha.nota{padding-left:0;padding-right:0}}div.nota textarea{font-family:san-serif,Arial,Helvetica;width:965px;margin-left:20px;padding:5px;line-height:1.5;border:1px solid var(--border-color)}@media print{div.col1.emblema-e-republica,div.container{visibility:visible}div.nota.no-print{display:none}div.nota textarea{padding:0}}div.nota textarea.bold{font-weight:700;border-color:transparent}div.nota textarea:focus{border:2px solid var(--blue)}
