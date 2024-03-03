@@ -241,6 +241,9 @@ div.ficha div.body {
 }
 
 /* Formatação comum */
+div.body > div {
+    border-bottom: 2px solid var(--border-color);
+}
 
 div.body > div.col:nth-child(n+2) > div {
     border-top: 2px solid var(--border-color);
@@ -251,7 +254,9 @@ div.body > div.col:nth-child(n+2) > div {
     line-height: 1.2;
 }
 
-div.body > div.col > div:first-child {
+div.body > div.col > div:first-child,
+div.body div.col-de-entrycels input:first-child,
+div.body div.col-de-entrycels div:first-child {
     border-top: none;
 }
 
@@ -297,9 +302,10 @@ div.col.de-pacotes-apss div:last-child span {
     transform: rotate(-90deg) translateX(-130px);
 }
 
-/* Coluna de linhas e de indicadores*/
+/* Coluna de linhas e de indicadores e inputs*/
 div.body div.col.de-linhas,
-div.body div.col.de-indicadores {
+div.body div.col.de-indicadores,
+div.body div.col-de-entrycels {
     display: grid;
     grid-template-rows: 100px 120px 90px 120px repeat(3, 100px);
 }
@@ -311,6 +317,7 @@ div.body div.col.de-linhas > div {
 
 div.body div.col.de-indicadores span {
     line-height: 1.3;
+    font-size: 1rem;
 }
 
 div.body div.col.de-indicadores em {
@@ -321,6 +328,73 @@ div.body div.col.de-indicadores em {
 div.body div.col.de-indicadores sup {
     font-size: 10px;
 }
+
+/* Coluna(s) de células de entrada */
+div.body div.col-de-entrycels input {
+    border-top: 2px solid var(--border-color);
+    border-left: 2px solid var(--border-color);
+}
+
+div.body div.col-de-entrycels input {
+    display: block;
+    min-width: 60px;
+}
+
+div.body div.col-de-entrycels._7 input {
+    border-right: 2px solid var(--border-color);
+    min-width: 108px;
+    margin-left: -1px;
+}
+
+div.n-a {
+    background-color: var(--fullblack);
+    border: none !important;
+    border: 2px solid var(--border-color)
+}
+
+/* Rodape da ficha */
+
+div.ficha footer {
+    display: grid;
+    grid-template-columns: 340px 240px 230px;
+    padding-left: 56px;
+    margin-top: 15px;
+    justify-content: space-between;
+    max-width: 905px;
+}
+
+div.ficha footer > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.ficha footer label {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+div.ficha footer input {
+    border-bottom: 1px solid var(--border-color);
+    width: 260px;
+    text-align: center;
+}
+
+footer div.col-de-assinatura input {
+    width: 180px;
+}
+
+footer div.col-de-data-de-elaboracao label {
+    align-self: flex-end;
+}
+
+footer div.col-de-data-de-elaboracao input {
+   width: 150px
+}
+
+
+
 
 
 
