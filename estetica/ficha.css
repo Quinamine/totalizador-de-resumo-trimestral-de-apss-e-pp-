@@ -1,10 +1,13 @@
-﻿input,textarea{border:none;border-radius:0;outline:0;color:var(--text-color);font-family:sans-serif,Arial,Helvetica!important;font-size:14px}input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}input[type=number]{-moz-appearance:textfield;padding:0;max-width:50px}input[type=number].fs-12{font-size:12px}input[type=number].fs-11{font-size:11px}input[readonly],input[type=date],input[type=text]{font-weight:700!important}input[readonly]{cursor:default;transition:background-color .4s ease-out}.bgc-gray,input[readonly].bg-gray{background-color:var(--gray-c)!important}input[type=number].fundo-vermelho{background-color:var(--danger-color)!important;color:var(--yt)}div.ficha strong{text-decoration:underline}div.container>header input{font-weight: bold;}
+﻿input,textarea{border:none;border-radius:0;outline:0;color:var(--text-color);font-family:sans-serif,Arial,Helvetica!important;font-size:14px}input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}input[type=number]{-moz-appearance:textfield;padding:0;max-width:50px}input[type=number].fs-12{font-size:12px}input[type=number].fs-11{font-size:11px}input[readonly],input[type=date],input[type=text]{font-weight:700!important}input[readonly]{cursor:default;transition:background-color .4s ease-out}.bgc-gray,input[readonly].bg-gray{background-color:var(--gray-c)!important}input[type=number].fundo-vermelho{background-color:var(--danger-color)!important;color:var(--yt)}div.ficha div.container>header input{font-weight: bold;}
 
 /* Container */
 div.container {
     max-width: 998px;
     min-width: 998px;
     margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 div.container div.contentor-de-emblema-e-titulo {
@@ -58,7 +61,7 @@ div.contentor-de-titulo span {
 
 div.linha-de-geolocalizacao {
     display: grid;
-    grid-template-columns: 95px 170px 200px 230px 60px;
+    grid-template-columns: 95px 185px 215px 240px 54px;
     grid-template-areas: ". provincia distrito us ano";
     margin-bottom: 8px;
 }
@@ -113,11 +116,15 @@ div.ficha header div.col1 {
     grid-area: col1;
     border: 2px solid var(--border-color);
     border-right: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 div.col1.com-titulo-linhas > * {
     display: block;
     text-align: center;
+    margin: 2px 0;
 }
 
 div.col1.com-titulo-linhas span {
@@ -333,6 +340,7 @@ div.body div.col.de-indicadores sup {
 div.body div.col-de-entrycels input {
     border-top: 2px solid var(--border-color);
     border-left: 2px solid var(--border-color);
+    text-align: center;
 }
 
 div.body div.col-de-entrycels input {
@@ -358,9 +366,16 @@ div.ficha footer {
     display: grid;
     grid-template-columns: 340px 240px 230px;
     padding-left: 56px;
-    margin-top: 15px;
+    margin: 15px 0;
     justify-content: space-between;
     max-width: 905px;
+    position: relative;
+}
+
+@media print {
+    div.ficha footer {
+        margin-bottom: 60px;
+    }
 }
 
 div.ficha footer > div {
@@ -393,9 +408,21 @@ footer div.col-de-data-de-elaboracao input {
    width: 150px
 }
 
+footer p.nota-b {
+    margin-bottom: 0;
+    position: absolute;
+    bottom: -45px;
+    left: 0;
+    display: none;
+}
+
+@media print {
+    footer p.nota-b {
+        display: initial;
+    }
+}
 
 
 
 
-
-@-moz-document url-prefix(){div.nota{min-height:96px}}@media screen and (max-width:998px){div.linha.nota{padding-left:0;padding-right:0}}div.nota textarea{font-family:san-serif,Arial,Helvetica;width:965px;margin-left:20px;padding:5px;line-height:1.5;border:1px solid var(--border-color)}@media print{div.col1.emblema-e-republica,div.container{visibility:visible}div.nota.no-print{display:none}div.nota textarea{padding:0}}div.nota textarea.bold{font-weight:700;border-color:transparent}div.nota textarea:focus{border:2px solid var(--blue)}
+@-moz-document url-prefix(){div.nota{min-height:96px}}@media screen and (max-width:998px){div.linha.nota{padding-left:0;padding-right:0}}div.nota textarea{font-family:san-serif,Arial,Helvetica;width:965px;padding:5px;line-height:1.5;border:1px solid var(--border-color)}@media print{div.col1.emblema-e-republica,div.container{visibility:visible}div.nota.no-print{display:none}div.nota textarea{padding:0}}div.nota textarea.bold{font-weight:700;border-color:transparent}div.nota textarea:focus{border:2px solid var(--blue)}
