@@ -9,8 +9,11 @@ function returnCurrentYear() {
 }
 
 
-let spanOutput;
+let spansOutput;
 window.addEventListener("load", () => {
-    spanOutput = document.querySelector("span.current-year");
-    spanOutput.textContent = returnCurrentYear();
+    spansOutput = document.querySelectorAll("span.current-year");
+
+    for (const span of spansOutput) {
+        span.textContent = returnCurrentYear();
+    }
 });
