@@ -13,7 +13,7 @@ div.container {
 div.container div.contentor-de-emblema-e-titulo {
     display: grid;
     grid-template-columns: 160px 638px;
-    grid-column-gap: 200px;
+    grid-column-gap: 132px;
     margin-bottom: 5px;
 }
 
@@ -64,6 +64,7 @@ div.linha-de-geolocalizacao {
     grid-template-columns: 95px 185px 215px 240px 54px;
     grid-template-areas: ". provincia distrito us ano";
     margin-bottom: 8px;
+    width: 905px;
 }
 
 div.linha-de-geolocalizacao > div {
@@ -104,6 +105,15 @@ div.ficha header {
     display: grid;
     grid-template-columns: 95px 40px 300px repeat(2, 180px) 110px;
     grid-template-areas: ". col1 col2 col3  col4 col5";
+    position: sticky;
+    top: 0;
+    background-color: var(--yt);
+}
+
+@media print {
+    div.ficha header {
+        position: initial;
+    }
 }
 
 div.ficha header > div {
@@ -129,7 +139,6 @@ div.col1.com-titulo-linhas > * {
 
 div.col1.com-titulo-linhas span {
     font-size: 16px;
-    transition: rotate(-90deg);
     transform: rotate(180deg);
     margin-top: -2px;
 }
@@ -141,7 +150,6 @@ div.ficha header div.col2 {
     grid-template-rows: calc(131.78px / 3) calc(131.78px - 131.78px / 3);
     border-left: 2px solid var(--border-color);
 }
-
 
 div.col2 div.contentor-do-titulo-colunas {
     border-top: 2px solid var(--border-color);
@@ -155,6 +163,7 @@ div.col2 div.contentor-do-titulo-colunas span {
     transform: rotate(90deg);
     font-size: 16px;
     margin-left: 4px;
+    margin-bottom: 2px;
 }
 
 div.col2 div.contentor-do-titulo-periodo {
@@ -179,6 +188,7 @@ div.contentor-de-inputs-para-periodo-de-reporte {
 div.contentor-de-inputs-para-periodo-de-reporte input {
     border-bottom: 1px solid var(--border-color);
     text-align: center;
+    font-weight: 700;
 }
 
 div.contentor-de-inputs-para-periodo-de-reporte span.barra,
@@ -278,6 +288,7 @@ div.body div.col.de-pacotes-apss > div {
     max-width: 95px;
     border-top: 2px solid var(--border-color);
     border-left: 2px solid var(--border-color);
+    position: relative;
 }
 
 div.body div.col.de-pacotes-apss > div:first-child {
@@ -425,4 +436,4 @@ footer p.nota-b {
 
 
 
-@-moz-document url-prefix(){div.nota{min-height:96px}}@media screen and (max-width:998px){div.linha.nota{padding-left:0;padding-right:0}}div.nota textarea{font-family:san-serif,Arial,Helvetica;width:965px;padding:5px;line-height:1.5;border:1px solid var(--border-color)}@media print{div.col1.emblema-e-republica,div.container{visibility:visible}div.nota.no-print{display:none}div.nota textarea{padding:0}}div.nota textarea.bold{font-weight:700;border-color:transparent}div.nota textarea:focus{border:2px solid var(--blue)}
+@-moz-document url-prefix(){div.nota{min-height:96px}}@media screen and (max-width:998px){div.linha.nota{padding-left:0;padding-right:0}}div.nota textarea{font-family:san-serif,Arial,Helvetica;width:890px;padding:5px;line-height:1.5;border:1px solid var(--border-color)}@media print{div.col1.emblema-e-republica,div.container{visibility:visible}div.nota.no-print{display:none}div.nota textarea{padding:0}}div.nota textarea.bold{font-weight:700;border-color:transparent}div.nota textarea:focus{border:2px solid var(--blue)}

@@ -12,7 +12,7 @@ const webStorage = {
     },
 
     salvarDadosAdicionais(){
-        let dadosAdicionais = document.querySelectorAll("div.container input[type=text], input[type=date], textarea#nota, input#ano");
+        let dadosAdicionais = document.querySelectorAll("div.container input[type=text], input[type=date], textarea#nota, input#ano, div.contentor-de-inputs-para-periodo-de-reporte input[type=number]");
         
         dadosAdicionais.forEach( dado => { 
             function destacarNota(dado) {
@@ -74,7 +74,6 @@ const totalizador = {
         $celulaDeSaida.value = soma;
     }
 }
- 
 
 window.addEventListener("load", () => {
     webStorage.salvarFicha();
