@@ -1,2 +1,2 @@
-# totalizador-de-resumo-mensal-de-hiv-e-sida
-Serviço online gratuito que auxilia na elaboração do resumo mensal de HIV/SIDA totalizando-o automaticamente com base nos dados preenchidos pelo usuário (Profissional de Saúde).
+# totalizador-de-resumo-trimestral-de-apss-e-pp
+Serviço online gratuito que auxilia na elaboração do resumo trimestral de APSS/PP (Apoio Psicossocial e Prevenção Positiva) totalizando-o automaticamente com base nos dados preenchidos pelo usuário (Profissional de Saúde).
